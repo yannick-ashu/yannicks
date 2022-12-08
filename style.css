@@ -1,94 +1,31 @@
-nav ul{
-    display: flex;
-    text-align: end;
-    list-style: none;
-    font-family: 'Times New Roman', Times, serif; 
-    gap: 20px;  
-}
-.header h1{
-    font-weight:100;
-    font-style: italic;
+.grid-p{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
 }
 
-header {
-    display: flex;
+.grid-p span {
+    background-color: white;
+    height: 100px;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: aliceblu;
-    top: 10px;
+    border: 1px solid black;
+    
 }
-.section1 h2{
-font-size: 30px;
-color: navy;
-text-align: center;
-text-decoration: double;
-font-family: 'Times New Roman', Times, serif;
-display: flex;
 
+.box1:nth-child(even) {
+    background-color:rgb(21, 19, 14);
+    border: 5px ;
 }
-.section1 p{
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-}
-article{
-    font-size: 30px;
-    text-align: center;
-    color: navy;
-padding: 5%;
+
+.box2:nth-child(odd) {
+    background-color:rgb(21, 19, 14);
+    border: 5px ;
 }
 body{
-    background:linear-gradient(rgb(227, 227, 254),black);
-}
-.footer{
-    background-color: rgb(170, 125, 125);
-    text-align: center;
-    font-size: 200%;
-    border-radius: 20px;
-    box-shadow: 20%;
-}
-.parag1{
-    border-radius: 20%;
-    font-style:italic;
+    background-color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
 }
 
-
-#message-me{
-border-radius: 20px;
-border-left: 10vmin;
-background-color: aliceblue;
-
-}
-#pasword{
-    border-radius: 10px;
-    width: 250px;
-    height: 30px;
-    border-color: aliceblue;
-    background-color: aliceblue;
-}
-#btn{
-    color: navy;
-    width: 20%;
-    height: 30px;
-    border-radius: 30%;
-    background-color: aliceblue;
-}
-#email{
-    background-color: aliceblue;
-    border-radius: 10%;
-    width: 250px;
-    height: 30px;
-    display: inline-block;
-}
-.section1{
-position: relative;
-padding: 5px;
-}
-#btn:hover{
-    background-color: aquamarine;
-    font-size: 20px;
-}
-#home:hover{
-background-color: ;
-}
+    
