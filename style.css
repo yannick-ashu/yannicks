@@ -1,57 +1,59 @@
-.flex-p{
+*,*::before, *::after {
+    box-sizing:border-box;
+    font-family:Gotham ROunded, monospace , sans-serif;
+    font-weight: normal;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right,rgb(17, 170, 221),rgb(94, 223, 94));
+
+}
+.calculator-grid{
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-auto-rows: minmax(150px,auto);
-    gap: 10px;
-    max-width:960px;
-    margin: 0 auto;
-    transform:scale(0.5);
-    rotate: Z(360deg);
-    background-color:white;
-   
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px)
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 3rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255,.75);
 
 }
-.block1{
-    grid-column: 1/3;
-    grid-row: 1/5;
-     background-color: goldenrod;
-     transform: rotateY(-30deg);
-     animation: animate 8s  infinite;
- }
-    
+.calculator-grid > button:hover{
+    background-color: rgb(90, 86, 86);
+animation: ease-in-out  5s ;
+}
+#spantwo{
+    grid-column: span 2;
+}
+#span2{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 / -1;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    color: whitesmoke;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 27px;
 
-.block3{
-grid-column: 3/5;
-grid-row: 3/5;
-background-color: blue;
-transform: rotateZ(-30deg);
-animation: animate 6s  reverse infinite;
 }
-  
-.block5{
- grid-column: 1/5;
- grid-row: 5/7;
- background-color: blueviolet;
-}
-.block2{
-grid-column: 3/7;
-grid-row: 1/3;
-background-color:yellow;
-}
-.block4{
-background-color: orange;
-grid-column: 5/7;
-grid-row: 3/7;
+.output .previous-operand{
+    color: wheat;
+    font-size: 1.5rem;
 }
 
-
-@keyframes animate {
-    0%
-    {
-        transform: rotateY(0deg) rotateX(360deg);;
-    }
-    100%
-    {
-        transform: rotateX(-360deg) rotateY(0deg);
-    }
+.output .current-operand{
+    color: rbga(225, 255, 255, .75);
+    font-size: 1.5rem;
 }
