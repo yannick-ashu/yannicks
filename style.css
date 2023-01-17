@@ -13,7 +13,7 @@ body{
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 90vh;
     grid-template-columns: repeat(4,100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px)
 }
@@ -27,7 +27,7 @@ body{
 }
 .calculator-grid > button:hover{
     background-color: rgb(90, 86, 86);
-animation: ease-in-out  5s ;
+animation: 2s ;
 }
 #spantwo{
     grid-column: span 2;
@@ -56,4 +56,24 @@ animation: ease-in-out  5s ;
 .output .current-operand{
     color: rbga(225, 255, 255, .75);
     font-size: 1.5rem;
+}
+@media  screen and (max-width: 914px) {
+    .output{
+        height: 150px;
+        font-size: 30px;
+        padding: 20px;
+    }
+ 
+    .calculator-grid{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        min-height: 90vh;
+        grid-template-columns: repeat(4,60px);
+        grid-template-rows: minmax(100px, auto) repeat(5, 60px)
+    }
+.calculator-grid > button{
+    font-size: 30px;
+    padding: 0;
+}
 }
